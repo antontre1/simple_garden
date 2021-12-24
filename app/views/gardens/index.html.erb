@@ -1,0 +1,4 @@
+<% @gardens.each do |garden| %>
+<%= garden.name%> <%= link_to "Show", garden_path(garden) %> <%= link_to "Edit", edit_garden_path(garden) %> <br>
+<% end %>
+<%= link_to "Do you wanna plants ?",  plants_path %>

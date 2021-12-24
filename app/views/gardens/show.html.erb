@@ -1,0 +1,8 @@
+Garden : <%= @garden.name%>
+<br>
+Plants :<br>
+<% @plants.each do |plant| %>
+  <%= plant.name%>  <%= link_to "Edit", edit_plant_path(plant) %><br>
+<% end %>
+<br>
+<%= link_to "Add a new plant", new_garden_plant_path(@garden) %>

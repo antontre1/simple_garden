@@ -1,0 +1,5 @@
+<h1>Plants#index</h1>
+<%= @garden.name if  @garden%>
+<% @plants.each do |plant| %>
+  <%= plant.name%> <%= link_to "Edit", edit_plant_path(plant) %><br>
+<% end %>

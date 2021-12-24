@@ -5,3 +5,13 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Plant.destroy_all
+Garden.destroy_all
+
+(1..10).each do |record|
+  gard = Garden.new(name: Faker::Games::Pokemon.name)
+  gard.save
+  plt = Plant.new(name: Faker::Dessert.variety)
+  plt.save
+end
